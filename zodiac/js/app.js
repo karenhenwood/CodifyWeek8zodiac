@@ -56,7 +56,16 @@ function getDate() {
     var m = document.getElementById("month").value;
     var d = document.getElementById("day").value;
     var y = document.getElementById("year").value;
-    document.getElementById("datereturn").innerHTML = m+"/"+d+"/"+y;
+    var moffset = Number(m)+1;
+    document.getElementById("datereturn").innerHTML = moffset+"/"+d+"/"+y;
+    var date = new Date(y,m,d); 
+    console.log(date)
+    var today = new Date (2017, 04,03)
+    if (date<today){
+    	console.log("date is less than today")
+    }else{
+    	console.log("date is greater than today")
+    }
 }
 
 
